@@ -8,6 +8,11 @@ day_of_week=$(date +%u)
 
 hosts_to_block=("reddit.com" "orf.at" "facebook.com" "youtube.com" "ycombinator.com" "derstandard.at")
 
+if [[ $UID != 0 ]]; then
+    echo "This script requires elevated priveleges, run with sudo!"
+    exit 1
+fi
+
 for i in "${hosts_to_block[@]}"
 do
    if ! grep -q "$i" /etc/hosts
