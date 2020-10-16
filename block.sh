@@ -18,7 +18,7 @@ do
    if ! grep -q "$i" /etc/hosts
    then
         #echo "$i not found, add to file"
-        echo "127.0.0.1 *$i www.$i" >> /etc/hosts  
+        echo "127.0.0.1 $i www.$i" >> /etc/hosts  
     fi
 done
 
