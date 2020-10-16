@@ -6,7 +6,7 @@ end=$(date --date="18:00" +%s)
 now=$(date +%s)
 day_of_week=$(date +%u)
 
-hosts_to_block=("reddit.com" "orf.at" "facebook.com" "youtube.com" "ycombinator.com" "derstandard.at")
+hosts_to_block=("reddit.com" "orf.at" "facebook.com" "youtube.com" "ycombinator.com" "derstandard.at" "twitter.com")
 
 if [[ $UID != 0 ]]; then
     echo "This script requires elevated priveleges, run with sudo!"
